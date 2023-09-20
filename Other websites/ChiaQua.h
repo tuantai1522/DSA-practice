@@ -1,13 +1,13 @@
-﻿
+﻿#pragma once
+//https://ntucoder.net/Problem/Details/3?fbclid=IwAR1W4FW7YDYV2u0um19kw7XOARCGrhIsMuSEwV6GxyBJIz1bx3AiLCgVzq8
+
 #include <iostream>
 #include <string>
 #include <algorithm>
-#include <math.h>
 #include <vector>
+#include <cmath>
 using namespace std;
-
-
-void solveTienTe() {
+void solveChiaQua() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
@@ -16,9 +16,6 @@ void solveTienTe() {
 	cin >> n;
 
 	vector<long long>arr(n);
-
-	vector<string>ans;
-
 	for (int i = 0; i < n; ++i) {
 		cin >> arr[i];
 	}
@@ -46,23 +43,9 @@ void solveTienTe() {
 		}
 
 		if (sumA == sumB) {
-			ans.push_back(temp);
+			cout << "YES";
+			return;
 		}
 	}
-
-	int length = ans.size();
-
-	if (length == 0) {
-		cout << "khong chia duoc";
-		return;
-	}
-	cout << length << endl;
-	for (int i = 0; i < ans.size(); ++i) {
-		for (int j = 0; j < n; ++j) {
-			cout << (ans[i][j] == '0' ? 'A' : 'B') << " ";
-		}
-		cout << "\n";
-	}
+	cout << "NO";
 }
-
-

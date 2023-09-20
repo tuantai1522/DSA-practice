@@ -1,5 +1,5 @@
 #pragma once
-// https://cses.fi/problemset/task/1084
+//https://cses.fi/problemset/task/1084
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -11,7 +11,9 @@ int ans = 0;
 int n, m, k;
 
 void solveApartments() {
-
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
 	cin >> n >> m >> k;
 	for (int i = 0; i < n; ++i) cin >> applicants[i];
 	for (int i = 0; i < m; ++i) cin >> apartments[i];
