@@ -1,0 +1,22 @@
+{
+  "files.associations": {
+    "string": "cpp",
+    "span": "cpp",
+    "vector": "cpp",
+    "*.tcc": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "forward_list": "cpp",
+    "array": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "ranges": "cpp",
+    "regex": "cpp",
+    "valarray": "cpp",
+    "bitset": "cpp",
+    "utility": "cpp",
+    "any": "cpp"
+  }
+}
