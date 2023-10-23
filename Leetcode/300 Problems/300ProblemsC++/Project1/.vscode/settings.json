@@ -17,6 +17,9 @@
     "valarray": "cpp",
     "bitset": "cpp",
     "utility": "cpp",
-    "any": "cpp"
+    "any": "cpp",
+    "set": "cpp",
+    "iterator": "cpp",
+    "tuple": "cpp"
   }
 }

@@ -1,5 +1,4 @@
-//User function Template for C++
-
+//https://practice.geeksforgeeks.org/problems/word-ladder-ii/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=word-ladder-ii
 class Solution {
 public:
     vector<vector<string>> findSequences(string beginWord, string endWord, vector<string>& wordList) {
