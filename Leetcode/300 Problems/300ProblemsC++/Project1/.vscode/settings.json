@@ -20,6 +20,7 @@
     "any": "cpp",
     "set": "cpp",
     "iterator": "cpp",
-    "tuple": "cpp"
+    "tuple": "cpp",
+    "functional": "cpp"
   }
 }
