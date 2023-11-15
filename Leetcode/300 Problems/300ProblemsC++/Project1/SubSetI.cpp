@@ -1,20 +1,39 @@
 // https://practice.geeksforgeeks.org/problems/subset-sums2234/1
 #include <bits/stdc++.h>
 using namespace std;
-void countTotal(vector<int> arr, int n, int index, int sum, vector<int> &ans)
+bool canPartitionTab(vector<int> nums, int target)
 {
-  if (index >= n)
-  {
-    ans.push_back(sum);
-    return;
-  }
-  countTotal(arr, n, index + 1, sum + arr[index], ans);
+  int n = nums.size();
+  vector<vector<int>> dp(n + 1, vector<int>(target + 1, 0));
 
-  countTotal(arr, n, index + 1, sum, ans);
+  for (int i = 0; i < n; i++)
+    dp[i][0] = 1;
+
+  for (int index = n - 1; index >= 0; index--)
+  {
+    for (int t = 1; t <= target; t++)
+    {
+      int include = 0;
+      if (t - nums[index] >= 0)
+        include = dp[index + 1][t - nums[index]];
+      int exclude = dp[index + 1][t];
+
+      dp[index][t] = (include or exclude);
+    }
+  }
+  return dp[0][target];
 }
-vector<int> subsetSums(vector<int> arr, int N)
+bool canPartition(vector<int> &nums)
 {
-  vector<int> ans;
-  countTotal(arr, N, 0, 0, ans);
-  return ans;
+
+  int total = 0;
+  for (auto it : nums)
+  {
+    total += it;
+  }
+  if (total % 2 == 1)
+    return false;
+  int target = total / 2;
+
+  return canPartitionTab(nums, target);
 }
